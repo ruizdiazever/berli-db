@@ -10,8 +10,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         "./sql/002_index.sql",
         "./sql/003_functions.sql",
         "./sql/004_triggers.sql",
-        "./sql/005_user.sql",
-        "./sql/006_products.sql",
+        "./sql/005_users.sql",
     ];
 
     // DB connection

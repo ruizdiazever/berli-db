@@ -1,6 +1,7 @@
 \c berli
 DO $$
 DECLARE
+    agent_id uuid;
     company_id_1 uuid;
     staff_id_1 uuid;
     client_id_1 uuid;
@@ -11,7 +12,8 @@ BEGIN
     INSERT INTO berli."agent" (email, name, lastname, role)
     VALUES (
         'ruizdiaz.oe@gmail.com', 'Ever', 'Ruiz Diaz', 'admin'
-    );
+    )
+    RETURNING id INTO agent_id;
 
     -- Insert a company
     INSERT INTO users."company" (email, company_tax_id, pec, name, industry, contact, area_code,
@@ -60,8 +62,8 @@ BEGIN
     area_code, phone, address_line, zip_code, city,
     country)
     VALUES (
-        'lala@lala.com', company_id_1, client_id_1, 'IT15B0329601601001167172790', 'RZDVRL92T13Z611L',
-        'CA11232SP', 'Jeff', 'Bezos', 'Engineer', 'jeff@amazon.com',
+        'ruizdiaz.oe@gmail.com', company_id_1, client_id_1, 'IT15B0329601601001167172790', 'RZDVRL92T13Z611L',
+        'CA11232SP', 'Albert', 'Einstein', 'Fisic', 'albert@fisic.org',
         '+54', '1122696100', 'Lungotevere Flaminio 44',  '00196', 'Rome',
         'Italy'
     )

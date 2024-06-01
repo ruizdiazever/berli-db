@@ -19,10 +19,5 @@ CREATE TABLE support."generic" (
     resolution_notes TEXT,
     attachments VARCHAR(255)[], -- Example VALUES ('{"archivo1.pdf", "archivo2.png", "archivo3.docx"}')
     created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    updated_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    FOREIGN KEY (entity_id) REFERENCES berli."agent"(id),
-    FOREIGN KEY (entity_id) REFERENCES users."company"(id),
-    FOREIGN KEY (entity_id) REFERENCES users."client"(id),
-    FOREIGN KEY (entity_id) REFERENCES users."staff"(id),
-    FOREIGN KEY (entity_id) REFERENCES users."employee"(id)
+    updated_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP NOT NULL
 )

@@ -8,7 +8,7 @@ CREATE TABLE permissions."system_agent" (
     -- SELF_UPDATE
     can_self_update BOOLEAN NOT NULL DEFAULT false, -- admin
     -- CREATION
-    agent BOOLEAN NOT NULL DEFAULT false, -- admin
+    can_create_agent BOOLEAN NOT NULL DEFAULT false, -- admin
     can_create_company BOOLEAN NOT NULL DEFAULT false, -- admin, managment, sales, support
     can_create_client BOOLEAN NOT NULL DEFAULT false, -- admin, managment, sales, support
     can_create_staff BOOLEAN NOT NULL DEFAULT false, -- admin, managment, sales, support

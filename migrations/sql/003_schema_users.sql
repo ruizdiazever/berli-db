@@ -25,7 +25,7 @@ CREATE TABLE users."company" (
 -- STAFF
 CREATE TABLE users."staff" (
     id uuid DEFAULT uuid_generate_v4() NOT NULL CONSTRAINT staff_pkey PRIMARY KEY,
-    email VARCHAR(89) NOT NULL CONSTRAINT email_staff_unique UNIQUE,
+    email VARCHAR(89) NOT NULL,
     name VARCHAR(100) NOT NULL,
     lastname VARCHAR(100) NOT NULL,
     avatar_id INTEGER NOT NULL CONSTRAINT fk_avatar REFERENCES berli."avatar" (id),
@@ -53,7 +53,7 @@ CREATE TABLE users."staff" (
 -- CLIENT
 CREATE TABLE users."client" (
     id uuid DEFAULT uuid_generate_v4() NOT NULL CONSTRAINT client_pkey PRIMARY KEY,
-    email VARCHAR(89) NOT NULL CONSTRAINT email_client_unique UNIQUE,
+    email VARCHAR(89) NOT NULL,
     name VARCHAR(100) NOT NULL,
     avatar_id INTEGER NOT NULL CONSTRAINT fk_avatar REFERENCES berli."avatar" (id),
     company_id uuid NOT NULL,
@@ -77,7 +77,7 @@ CREATE TABLE users."client" (
 -- EMPLOYEE
 CREATE TABLE users."employee" (
     id uuid DEFAULT uuid_generate_v4() NOT NULL CONSTRAINT employee_pkey PRIMARY KEY,
-    email VARCHAR(89) NOT NULL CONSTRAINT employee_client_unique UNIQUE,
+    email VARCHAR(89) NOT NULL,
     name VARCHAR(40) NOT NULL,
     lastname VARCHAR(100) NOT NULL,
     avatar_id INTEGER NOT NULL CONSTRAINT fk_avatar REFERENCES berli."avatar" (id),

@@ -41,7 +41,7 @@ BEGIN
     INSERT INTO users."staff" (email, company_id, iban, tax_id, national_id_card,
     name, lastname, position, contact, area_code, phone, address_line, zip_code, city, country)
     VALUES (
-        'valentinadandria@gmail.com', company_id_1, 'IT78B0329401601000067173780', 'RZDVRL92T13Z610L',
+        'valentinadandria@gmail.com', company_id_2, 'IT78B0329401601000067173780', 'RZDVRL92T13Z610L',
         'CA21242JP', 'Valentina', 'dAndria', 'Subdirectora', 'valentinadandria@gmail.com',
         '+39', '3280649202', 'Lungotevere Flaminio 44', '00196', 'Rome', 'Italy'
     )
